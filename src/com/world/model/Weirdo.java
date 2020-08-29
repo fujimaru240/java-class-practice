@@ -28,12 +28,13 @@ public class Weirdo extends Person {
    */
   public void telepathy(String thinking) {
     this.thinking = thinking;
+    this.express("…");
   }
 
   /**
    * 感じる
    */
   public void feel() {
-    this.express(this.thinking);
+    this.express("(" + this.thinking + ")");
   }
 }

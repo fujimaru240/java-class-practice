@@ -61,12 +61,27 @@ public abstract class Person extends Creature {
     }
   }
 
-  public void memorize(String message) {
-    this.message = message;
+  /**
+   * 思う
+   * 
+   * @param thinking 思考
+   */
+  public void think(String thinking) {
+    this.message = thinking;
   }
 
+  /**
+   * 伝える
+   */
   public void tell() {
-    this.express(this.message);
+    switch (TimeUtil.getCurrentTimeFrame()) {
+      case Night:
+      case SleepTime:
+        this.express(EXPRESSION_SLEEP);
+        break;
+      default:
+        this.express(this.message);
+        break;
+    }
   }
-
 }
