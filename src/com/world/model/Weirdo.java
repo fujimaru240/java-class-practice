@@ -5,6 +5,7 @@ package com.world.model;
  */
 public class Weirdo extends Person {
 
+  /** 思考 */
   private static String thinking;
 
   /**

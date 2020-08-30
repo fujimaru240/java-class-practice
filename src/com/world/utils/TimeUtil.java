@@ -5,8 +5,14 @@ import java.time.LocalTime;
 
 import com.world.status.TimeFrame;
 
-public class TimeUtil {
+/**
+ * 時間ユーティリティ
+ */
+public final class TimeUtil {
 
+  /**
+   * 現在の時間帯を取得する
+   */
   public static TimeFrame getCurrentTimeFrame() {
     LocalTime currentTime = LocalDateTime.now().toLocalTime();
     
